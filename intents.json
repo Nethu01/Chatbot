@@ -1,0 +1,153 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hey", "Hello", "Good day", "Is anyone there?", "How are you"],
+      "responses": [
+        "Hello! Welcome to the Cricket Stats Management System.",
+        "Hi there! How can I assist you today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "Goodbye! Come back anytime for more cricket info.",
+        "See you soon!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks a lot"],
+      "responses": [
+        "You're welcome!",
+        "Glad I could help!",
+        "Any time!"
+      ]
+    },
+    {
+      "tag": "player_details",
+      "patterns": [
+        "Show player details",
+        "I want to see player information",
+        "Give me details of a player",
+        "Tell me about a player",
+        "Player profile"
+      ],
+      "responses": [
+        "You can view all player profiles at our Players page: /players",
+        "Visit the Players section to explore player details: /players"
+      ]
+    },
+    {
+      "tag": "player_stats",
+      "patterns": [
+        "Show player statistics",
+        "Give me stats for a player",
+        "What are the stats of a player?",
+        "Player performance details",
+        "View batting and bowling stats"
+      ],
+      "responses": [
+        "You can find player statistics on the Stats page: /player-stats",
+        "Please visit /player-stats to view performance data for all players."
+      ]
+    },
+    {
+      "tag": "match_details",
+      "patterns": [
+        "Show match details",
+        "I want to know about a match",
+        "Match info",
+        "Tell me about a match",
+        "Details of a cricket match"
+      ],
+      "responses": [
+        "You can explore match details at: /matches",
+        "Visit the Matches page to view all match details: /matches"
+      ]
+    },
+    {
+      "tag": "match_summary",
+      "patterns": [
+        "Show match summary",
+        "Give me the match result",
+        "Tell me who won the match",
+        "Match overview",
+        "What happened in the match?"
+      ],
+      "responses": [
+        "You can find match summaries and results on this page: /match-summaries",
+        "Check the Match Summaries section here: /match-summaries"
+      ]
+    },
+    {
+      "tag": "coach_details",
+      "patterns": [
+        "Show coach details",
+        "Who is the coach?",
+        "Coach information",
+        "Tell me about the coach",
+        "Coach profile"
+      ],
+      "responses": [
+        "You can view coach profiles at: /coaches",
+        "Please visit the Coaches section for more details: /coaches"
+      ]
+    },
+    {
+      "tag": "team_info",
+      "patterns": [
+        "Show team details",
+        "Tell me about the team",
+        "View team members",
+        "Team information",
+        "Show team squad"
+      ],
+      "responses": [
+        "Visit the Teams page to view team details: /teams",
+        "You can find all team information here: /teams"
+      ]
+    },
+    {
+      "tag": "top_performers",
+      "patterns": [
+        "Who are the top performers?",
+        "Top players",
+        "Best batsman",
+        "Top bowler",
+        "Best player performance"
+      ],
+      "responses": [
+        "You can check top performers and rankings here: /top-performers",
+        "Visit /top-performers to view leading players and statistics."
+      ]
+    },
+    {
+      "tag": "upcoming_matches",
+      "patterns": [
+        "Show upcoming matches",
+        "When is the next match?",
+        "Next fixtures",
+        "Upcoming games",
+        "What matches are scheduled?"
+      ],
+      "responses": [
+        "You can view upcoming matches at: /schedule",
+        "Check the upcoming fixtures here: /schedule"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a cricket joke",
+        "Say something funny",
+        "Do you know a cricket joke?"
+      ],
+      "responses": [
+        "Why did the cricket team bring a ladder? Because they were playing in a high-stakes match!",
+        "Why do bowlers never get invited to parties? Because they always bring a spin!"
+      ]
+    }
+  ]
+}
