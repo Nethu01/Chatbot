@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import torch
 import random
 import json
+import os
 
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
@@ -13,12 +14,13 @@ app = Flask(__name__)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Load intents JSON
-with open('intents.json', 'r') as json_data:
+INTENTS_PATH = os.getenv("INTENTS_PATH", "intents.json")
+with open(INTENTS_PATH, 'r') as json_data:
     intents = json.load(json_data)
 
 # Load trained model data
-FILE = "data.pth"
-data = torch.load(FILE)
+MODEL_PATH = os.getenv("MODEL_PATH", "data.pth")
+data = torch.load(MODEL_PATH)
 
 input_size = data["input_size"]
 hidden_size = data["hidden_size"]
@@ -66,5 +68,9 @@ def predict():
     return jsonify({'bot_name': bot_name, 'response': response})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
-
+    # Use environment variables for configuration
+    app.run(
+        host="0.0.0.0",
+        port=int(os.getenv("PORT", 8080)),
+        debug=os.getenv("FLASK_ENV") == "development"
+    )
